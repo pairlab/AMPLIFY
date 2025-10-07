@@ -27,7 +27,7 @@ cd AMPLIFY
 
 #### 2. Clone and install third party packages
 Note that LIBERO will require [CMake](https://cmake.org/download/) if you do not already have it installed.
-See [Notes](#notes) if you run into issues related to `egl_probe`.
+See [Notes](#notes) if you run into issues related to `egl_probe`, or are seeing `ModuleNotFoundError`.
 
 ``` bash
 # LIBERO benchmark
@@ -51,7 +51,6 @@ cd ..
 #### 3. Install AMPLIFY
 
 ``` bash
-cd AMPLIFY
 pip install -e .
 ```
 
@@ -161,6 +160,9 @@ During your LIBERO installation you may have ran into an issue where LIBERO depe
 ```bash
 pip download egl-probe --no-binary :all: && tar -xzf egl_probe-*.tar.gz && cp -r egl_probe-*/egl_probe $(python -c "import site; print(site.getsitepackages()[0])") && echo "egl-probe" > $(python -c "import site; print(site.getsitepackages()[0])")/egl_probe-1.0.2.egg-info && rm -rf egl_probe-*
 ```
+
+#### `ModuleNotFoundError`: No module named 'libero'
+To solve this, simply run `pip install -e . --config-settings editable_mode=compat` instead of `pip install -e .` in the LIBERO directory.
 
 #### Issues with LIBERO dependencies
 If you run into issues with LIBERO dependencies, try the following command:
