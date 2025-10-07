@@ -66,7 +66,7 @@ dependencies = [
     "torch>=2.5.1",
     "torchvision>=0.20.1",
     "tqdm==4.66.5",
-    "transformers==4.21.1",
+    "transformers==4.53.0",
     "vector-quantize-pytorch==1.20.11",
     "wandb==0.13.1",
 ]
