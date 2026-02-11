@@ -51,7 +51,7 @@ dependencies = [
     "numpy<2.0.0,>=1.20.0",
     "omegaconf==2.3.0",
     "opencv-python==4.6.0.66",
-    "pillow==10.4.0",
+    "pillow==12.1.1",
     "positional-encodings==6.0.3",
     "pyinstrument==4.7.2",
     "requests==2.32.3",
